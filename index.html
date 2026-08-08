@@ -346,8 +346,8 @@
   }
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem 3rem;
   }
   .skill-group h4 {
     font-family: var(--mono);
@@ -566,6 +566,10 @@
   }
 
   /* Mobile */
+  @media (max-width: 900px) {
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
   @media (max-width: 768px) {
     nav { padding: 1rem 1.25rem; }
     .nav-links { gap: 1.25rem; }
@@ -576,6 +580,10 @@
     .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
     .skills-section { padding: 4rem 1.5rem; }
+  }
+
+  @media (max-width: 600px) {
+    .skills-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -718,16 +726,10 @@
           <span class="tag">Garak</span>
           <span class="tag">PyRIT</span>
           <span class="tag">Promptfoo</span>
-          <span class="tag">AI Red Teaming</span>
-          <span class="tag">AI Guardrails</span>
-          <span class="tag">Prompt Injection Testing</span>
           <span class="tag">OWASP LLM Top 10</span>
           <span class="tag">MITRE ATLAS</span>
           <span class="tag">Azure Security Center</span>
           <span class="tag">IAM</span>
-          <span class="tag">Vulnerability Assessment</span>
-          <span class="tag">Threat Modeling</span>
-          <span class="tag">Secure SDLC</span>
         </div>
       </div>
       <div class="skill-group">
